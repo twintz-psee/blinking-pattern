@@ -4,6 +4,21 @@
     <meta charset="utf-8" />
     <title>Blinking Image</title>
     <meta name="viewport" content="width=device-width" />
+    <script>
+        var src1 = "siemens.svg"
+        var src2 = "calib.png"
+
+        function clickimg() {
+                if (document.getElementById("blink-img").getAttribute('src')=== src1)
+                {
+                    document.getElementById("blink-img").setAttribute('src', src2);
+                }
+                else if (document.getElementById("blink-img").getAttribute('src') === src2)
+                {
+                    document.getElementById("blink-img").src = src1;
+                }
+        }
+    </script>
     <style>
         /* IE */
         @-ms-keyframes blink {
@@ -38,7 +53,6 @@
     </style>
   </head>
   <body>
-    <img class="blink-image" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Siemens_star.svg">
-
+    <img width="100%" ="blink-image" class="blink-image" src="siemens.svg">
   </body>
 </html>
